@@ -13,15 +13,39 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
-let team = [];
+let team = [
+    {
+        name: bea,
+        age: 27,
+        role: Manager,
+    },
+    {
+        name: pop ,
+        age: 32,
+        role: Engineer,
+    },
+    {
+        name: kip ,
+        age: 41,
+        role: Employee, 
+    },
+    {
+        name: bip ,
+        age: 23,
+        role: Intern
+    },
+];
 
-startProgram()
+console.log(team);
 
 async function startProgram(){
     
-    team.push(new Employee("Rebecca", 123724, "test@test.com"))
+    team.push
     
     let htmlDoc = render(team)
-
+    
     await fs.writeFile(outputPath, htmlDoc);
-}
+};
+
+startProgram()
+
